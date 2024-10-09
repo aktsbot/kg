@@ -24,8 +24,9 @@ const nav = () => {
       <div class="search-container">
         <input
           type="text"
-          placeholder="Search.."
-          name="search"
+          placeholder="🔍 Search"
+          id="search-input"
+          disabled
         />
       </div>
     </nav>
@@ -46,7 +47,10 @@ const search = () => {
 const article = ({ content }) => {
   const str = `
   <article class="container">
+
+  <div id="main">
   ${content}
+  </div>
   
   ${search()}
   </article>
