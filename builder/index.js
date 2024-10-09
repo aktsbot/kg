@@ -52,6 +52,14 @@ function buildIndex({ indexList }) {
     encoding: "utf-8",
   });
   log(" done");
+
+  log("making index-search.json");
+  const content = indexList.map((item) => item.search);
+  const str = JSON.stringify(content);
+  fs.writeFileSync(`${distDir}/index-search.json`, str, {
+    encoding: "utf-8",
+  });
+  log(" done");
 }
 
 function processFile({ path }) {
@@ -77,6 +85,11 @@ function processFile({ path }) {
     processed = {
       htmlFileName,
       title: gm.data.title,
+      search: {
+        ml: gm.data.title,
+        en: gm.data.slug.replace(/_/g, " "),
+        link: htmlFileName,
+      },
     };
   } catch (error) {
     console.error(error);

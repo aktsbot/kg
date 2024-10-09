@@ -33,9 +33,23 @@ const nav = () => {
   return str;
 };
 
+const search = () => {
+  const str = `
+  <div id="search" class="d-none">
+    <h1>Search results 🔍</h1>
+    <div id="search-results"></div>
+  </div>`;
+
+  return str;
+};
+
 const article = ({ content }) => {
   const str = `
-  <article class="container">${content}</article>
+  <article class="container">
+  ${content}
+  
+  ${search()}
+  </article>
   `;
   return str;
 };
@@ -43,6 +57,7 @@ const article = ({ content }) => {
 const tail = () => {
   const str = `
   <div class="empty-height"></div>
+  <script src="/assets/script.js"></script>
   </body>
 </html>`;
   return str;

@@ -73,3 +73,7 @@ ol > li {
   padding-top: 2em;
   padding-bottom: 2em;
 }
+
+.d-none {
+  display: none;
+}
