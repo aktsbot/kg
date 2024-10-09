@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Manjari-Regular";
+  src: url("/assets/Manjari-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manjari-Bold";
+  src: url("/assets/Manjari-Bold.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  font-family: "Manjari-Regular", sans-serif;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Manjari-Bold", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  margin: 15px auto;
+  padding: 0 10px;
+  max-width: 650px;
+}
+
+.song {
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+
+nav {
+  background-color: #e9e9e9;
+  display: flex;
+  font-size: 2rem;
+  padding: 5px;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+nav a {
+  text-decoration: none;
+  text-align: center;
+}
+
+nav div {
+  padding: 8px 12px;
+}
+
+nav input[type="text"] {
+  padding: 5px;
+  font-size: 1.1rem;
+}
+
+ol > li {
+  margin-top: 1rem;
+}
+
+.empty-height {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}

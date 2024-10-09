@@ -1,0 +1,17 @@
+{
+  "name": "kg",
+  "version": "0.0.1",
+  "description": "",
+  "main": "builder/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node builder",
+    "serve": "npx serve -p 3456 dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
