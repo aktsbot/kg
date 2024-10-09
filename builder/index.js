@@ -70,7 +70,7 @@ function processFile({ path }) {
     const gm = matter(data);
     const htmlFileName = `${gm.data.slug}.html`;
     let htmlContent = `<h1>${gm.data.title}</h1>`;
-    htmlContent += `<div class="song">${gm.content}</div>`;
+    htmlContent += `<div class="song">${gm.content.trim()}</div>`;
 
     const fullHtml = makePage({
       content: htmlContent,
