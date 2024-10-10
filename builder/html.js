@@ -18,16 +18,18 @@ const nav = () => {
   const str = `
   <!-- navbar -->
     <nav>
-      <div>
-        <a href="/" class="home">&#127968;</a>
-      </div>
-      <div class="search-container">
-        <input
-          type="text"
-          placeholder="🔍 Search"
-          id="search-input"
-          disabled
-        />
+      <div class="nav-items-wrapper">
+        <div>
+          <a href="/" class="home">&#127968;</a>
+        </div>
+        <div class="search-container">
+          <input
+            type="text"
+            placeholder="🔍 Search"
+            id="search-input"
+            disabled
+          />
+        </div>
       </div>
     </nav>
   `;
