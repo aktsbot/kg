@@ -34,8 +34,7 @@ $ npm run serve
 Visit http://localhost:3456 to see it running.
 
 To deploy the songbook, copy over the [dist](dist) folder to
-your server's www folder. Here's a sample nginx config to do 
-something like this.
+your server's www folder. Here's a sample nginx config.
 
 ```
 server {
