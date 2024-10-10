@@ -1,3 +1,63 @@
 # kg - ക്രിസ്തീയ ഗീതങ്ങൾ
 
-## WIP
+This is the source code for https://kg.aktsbot.in/ - an online malayalam christian songbook. 
+The whole songbook is a set of statically generated html files from markdown files in the [songs](songs) folder.
+
+## Getting started
+
+Clone and setup the repo.
+
+```
+$ git clone https://github.com/aktsbot/kg
+$ cd kg
+$ npm i
+```
+
+Building the songbook is easy as running
+
+```
+$ npm run build
+```
+
+To see logs of the build process, run it like so
+
+```
+$ LOG=1 npm run build
+```
+
+To see the generated songbook site, run
+
+```
+$ npm run serve
+```
+
+Visit http://localhost:3456 to see it running.
+
+To deploy the songbook, copy over the [dist](dist) folder to
+your server's www folder. Here's a sample nginx config to do 
+something like this.
+
+```
+server {
+  listen 80;
+
+  root /path/to/kg/dist;
+  index index.html index.htm;
+
+  server_name kg.mysite.com;
+
+  location / {
+    default_type "text/html";
+    try_files $uri.html $uri $uri/ /index.html;
+  }
+}
+```
+
+## What makes it different?
+
+Manglish search for song titles. That's it!
+
+## Thanks
+
+- The songs are all credited to their `source` in the individual markdown files. 
+- The incredible [grey-matter](https://github.com/jonschlinkert/gray-matter) library.
