@@ -60,3 +60,4 @@ Manglish search for song titles. That's it!
 
 - The songs are all credited to their `source` in the individual markdown files. 
 - The incredible [grey-matter](https://github.com/jonschlinkert/gray-matter) library.
+- The fabulous [Manjari](https://smc.org.in/ml/fonts/manjari/) font.
