@@ -62,7 +62,7 @@ rsync -avzh -e 'ssh -p 6457 -i ~/.ssh/id_rsa_vps' --progress ./dist/* sshuser@1.
 ```
 
 This assumes openssh server is running on port 6457(on your vps) and that rsync is installed(on your vps and on your local
-machine). I usually put this command in a `deploy.sh`.
+machine). I usually put this command in a `deploy.sh` script in the root of this project and run that.
 
 ## What makes it different?
 
