@@ -55,6 +55,15 @@ server {
 }
 ```
 
+Here's an rsync command to deploy the dist folder to your server
+
+```
+rsync -avzh -e 'ssh -p 6457 -i ~/.ssh/id_rsa_vps' --progress ./dist/* sshuser@1.2.3.4:/var/www/kg.mydomain.com/.
+```
+
+This assumes openssh server is running on port 6457(on your vps) and that rsync is installed(on your vps and on your local
+machine). I usually put this command in a `deploy.sh`.
+
 ## What makes it different?
 
 Manglish search for song titles. That's it!

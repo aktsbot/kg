@@ -1,1 +1,4 @@
 node_modules
+
+# personal script to deploy to server
+deploy.sh
