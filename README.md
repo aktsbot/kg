@@ -1,6 +1,6 @@
 # kg - ക്രിസ്തീയ ഗീതങ്ങൾ
 
-This is the source code for https://kg.aktsbot.in/ - an online malayalam christian songbook. 
+This is the source code for https://kg.aktsbot.in/ - an online malayalam christian songbook.
 The whole songbook is a set of statically generated html files from markdown files in the [songs](songs) folder.
 
 ## Getting started
@@ -16,8 +16,11 @@ $ npm i
 Building the songbook is easy as running
 
 ```
+$ export SITE_NAME="https://your-domain.com"
 $ npm run build
 ```
+
+Look at [builder/index.js](builder/index.js) config section to update default values.
 
 To see logs of the build process, run it like so
 
@@ -58,6 +61,6 @@ Manglish search for song titles. That's it!
 
 ## Thanks
 
-- The songs are all credited to their `source` in the individual markdown files. 
+- The songs are all credited to their `source` in the individual markdown files.
 - The incredible [grey-matter](https://github.com/jonschlinkert/gray-matter) library.
 - The fabulous [Manjari](https://smc.org.in/ml/fonts/manjari/) font.

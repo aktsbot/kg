@@ -1,4 +1,4 @@
-const head = ({ title = "ക്രിസ്തീയ ഗീതങ്ങൾ" }) => {
+const head = ({ title = "ക്രിസ്തീയ ഗീതങ്ങൾ", siteName, subPath = "" }) => {
   const str = `
   <!doctype html>
   <html lang="en">
@@ -6,6 +6,9 @@ const head = ({ title = "ക്രിസ്തീയ ഗീതങ്ങൾ" }) =
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>${title} | Kristheeya geethangal</title>
+      <meta name="title" content="Kristheeya geethangal" />
+      <meta name="description" content="Malayalam songbook for popular christian songs" />
+      <link rel="canonical" href="${siteName}/${subPath}" />
       <link rel="stylesheet" href="/assets/style.css?_=${new Date().getTime()}" />
       <link rel="icon" href="/favicon.svg" />
     </head>  
@@ -69,10 +72,16 @@ const tail = () => {
   return str;
 };
 
-export const makePage = ({ content, type = "index", title }) => {
-  let html = `${head({})}`;
+export const makePage = ({
+  content,
+  type = "index",
+  title,
+  siteName,
+  subPath,
+}) => {
+  let html = `${head({ siteName, subPath })}`;
   if (title) {
-    html = `${head({ title })}`;
+    html = `${head({ title, siteName, subPath })}`;
   }
   html += `${nav()}`;
   html += `${article({ content })}`;

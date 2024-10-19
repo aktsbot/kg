@@ -4,6 +4,8 @@ import matter from "gray-matter";
 // ------------ config --------------
 const songsDir = "songs";
 const distDir = "dist";
+
+const siteName = process.env.SITE_NAME || "https://kg.aktsbot.in";
 // ----------------------------------
 
 import { makePage } from "./html.js";
@@ -46,6 +48,7 @@ function buildIndex({ indexList }) {
     content: htmlContent,
     title: "ക്രിസ്തീയ ഗീതങ്ങൾ",
     type: "index",
+    siteName,
   });
 
   fs.writeFileSync(`${distDir}/${htmlFileName}`, fullHtml, {
@@ -76,6 +79,8 @@ function processFile({ path }) {
       content: htmlContent,
       title: gm.data.title,
       type: "song",
+      siteName,
+      subPath: htmlFileName,
     });
 
     fs.writeFileSync(`${distDir}/${htmlFileName}`, fullHtml, {
