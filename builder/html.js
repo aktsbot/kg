@@ -6,7 +6,7 @@ const head = ({ title = "ക്രിസ്തീയ ഗീതങ്ങൾ", sit
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>${title} | Kristheeya geethangal</title>
-      <meta name="title" content="Kristheeya geethangal" />
+      <meta name="title" content="${title} | Kristheeya geethangal" />
       <meta name="description" content="Malayalam songbook for popular christian songs" />
       <link rel="canonical" href="${siteName}/${subPath}" />
       <link rel="stylesheet" href="/assets/style.css?_=${new Date().getTime()}" />
